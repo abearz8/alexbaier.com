@@ -20,6 +20,7 @@ export default function SectionHeader({
           "isolate", 
           className,
         ].join(" ")}
+        style={{ fontSize: 'min(8vw, 4.5rem)' }}
       >
       {/* Text above the bar */}
       <span className="relative z-10">{children}</span>

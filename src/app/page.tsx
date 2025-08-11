@@ -1,10 +1,44 @@
 "use client"
 import Particles from "../blocks/Backgrounds/Particles/Particles";
-import Orb from "../blocks/Backgrounds/Orb/Orb";
 import RotatingText from "../blocks/TextAnimations/RotatingText/RotatingText";
 import Navigation from "../blocks/Navigation/Navigation/Navigation";
 import SectionHeader from "../blocks/Headers/SectionHeader/SectionHeader";
+import ScrollToTop from "../blocks/Components/ScrollToTop/ScrollToTop";
+import ExperienceList, { ExperienceItem } from "../blocks/Components/ExperienceStack/ExperienceList";
+import AboutSkillsCerts from "@/blocks/Components/AboutSkillsCerts/AboutSkillsCerts";
 
+const experiences: ExperienceItem[] = [
+  {
+    title: "Grants and Recognition Coordinator",
+    company: "University Students' Council",
+    start: "September 2025",
+    end: "Present",
+    description:
+      "Part time work - Lead a six person committee to manage the $100,000+ budget for student events and initiatives and deliberate on student awards.",
+    skills: ["Team Leadership", "Grant Evaluation", "Communication"],
+    companyUrl: "https://westernusc.ca/services/grants-and-recognition/",
+  },
+  {
+    title: "Assurance Intern",
+    company: "BDO Canada",
+    start: "May 2025",
+    end: "August 2025",
+    description:
+      "Managed client relationships and performed audit procedures in team settings to support accurate financial statements and compliance.",
+    skills: ["Audit Procedures", "Excel", "Power BI", "Client Communication"],
+    companyUrl: "https://www.bdo.ca/services/audit-assurance",
+  },
+  {
+    title: "Software and Business Analyst",
+    company: "Lakeside Psychological and Educational",
+    start: "May 2024",
+    end: "April 2025",
+    description:
+      "Built practice's digital foundation by deploying on AWS (site, storage, access), configuring professional email and domains, and setting up core office IT.",
+    skills: ["AWS", "Email and Domain Admin", "Device Set Up", "Security Policies"],
+    companyUrl: "https://www.lakesidepes.ca",
+  }
+];
 
 export default function Home() {
   return (
@@ -61,6 +95,8 @@ export default function Home() {
             </div>
             <div className="mt-20 flex justify-center">
             </div>
+
+            
             {/* Scroll Down Arrow */}
             <div className="mt-16 flex justify-center">
               <button 
@@ -98,72 +134,53 @@ export default function Home() {
         <Navigation />
         
         {/* About Me Section */}
-        <div id="about" className="pt-20">
+        <div id="about" className="pt-20 mb-36">
           <div className="container mx-auto px-4 py-16">
           <SectionHeader className="text-7xl">About Me</SectionHeader>
-            <p className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-inter text-center max-w-4xl mx-auto leading-relaxed">
-              Welcome to the next section of my portfolio! This is where you can add more content about yourself, your projects, or any other sections you'd like to include.
-            </p>
+          <div className="pt-6">
+            <AboutSkillsCerts
+              blurb="I’m a 3rd-year Ivey + Data Science student who loves building practical software that bridges business and tech."
+              languages={[
+                { name: "Python", logoSrc: "/logos/python.png" },
+                { name: "Jupyter", logoSrc: "/logos/jupyter.png" },
+                { name: "Next.js", logoSrc: "/logos/nextjs.png" },
+                { name: "TypeScript", logoSrc: "/logos/typescript.png" },
+                { name: "Java", logoSrc: "/logos/java.png" },
+                { name: "PostgreSQL", logoSrc: "/logos/sql.png" },
+              ]}
+              certs={[
+                {
+                  title: "AWS Certified AI Practitioner",
+                  href: "https://www.credly.com/badges/50d92a93-f7cb-4200-9757-e92482e5c6cf/public_url",        
+                  logoSrc: "/logos/CAI_Badge.png",
+                },
+                {
+                  title: "AWS Certified Cloud Practitioner",
+                  href: "https://www.credly.com/badges/eb74cee7-e130-47df-bba9-e018b839dc74/public_url",        
+                  logoSrc: "/logos/CPP_Badge.png",
+                },
+              ]}
+              cvHref="/Alex_Baer_CV.pdf"
+            />
+            </div>
           </div>
         </div>
 
         {/* Experiences Section */}
-        <div id="experiences" className="pt-20">
-          <div className="container mx-auto px-4 py-16">
+        <div id="experiences" className="mb-36">
+          <div className="container mx-auto px-4 py-4">
             <SectionHeader className="text-7xl">Experiences</SectionHeader>
-            <div className="max-w-6xl mx-auto">
-              <div className="grid md:grid-cols-2 gap-8">
-                {/* Experience Card 1 */}
-                <div className="bg-black/20 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                  <h3 className="text-white text-2xl font-bold font-inter mb-2">
-                    Software Engineer
-                  </h3>
-                  <p className="text-purple-300 font-inter mb-2">Tech Company • 2022 - Present</p>
-                  <p className="text-white/80 font-inter leading-relaxed">
-                    Developed scalable web applications using modern technologies. Led team projects and mentored junior developers.
-                  </p>
-                </div>
-
-                {/* Experience Card 2 */}
-                <div className="bg-black/20 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                  <h3 className="text-white text-2xl font-bold font-inter mb-2">
-                    Data Scientist
-                  </h3>
-                  <p className="text-purple-300 font-inter mb-2">Analytics Firm • 2020 - 2022</p>
-                  <p className="text-white/80 font-inter leading-relaxed">
-                    Built machine learning models and data pipelines. Analyzed large datasets to drive business decisions.
-                  </p>
-                </div>
-
-                {/* Experience Card 3 */}
-                <div className="bg-black/20 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                  <h3 className="text-white text-2xl font-bold font-inter mb-2">
-                    Frontend Developer
-                  </h3>
-                  <p className="text-purple-300 font-inter mb-2">Startup • 2019 - 2020</p>
-                  <p className="text-white/80 font-inter leading-relaxed">
-                    Created responsive user interfaces and improved user experience. Collaborated with design and backend teams.
-                  </p>
-                </div>
-
-                {/* Experience Card 4 */}
-                <div className="bg-black/20 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                  <h3 className="text-white text-2xl font-bold font-inter mb-2">
-                    Research Assistant
-                  </h3>
-                  <p className="text-purple-300 font-inter mb-2">University • 2018 - 2019</p>
-                  <p className="text-white/80 font-inter leading-relaxed">
-                    Conducted research in computer science. Published papers and presented findings at conferences.
-                  </p>
-                </div>
-              </div>
+            
+            {/* Experience Cards */}
+            <div className="mt-16">
+              <ExperienceList items={experiences} className="max-w-6xl mx-auto" />
             </div>
           </div>
         </div>
 
         {/* Projects Section */}
-        <div id="projects" className="pt-20">
-          <div className="container mx-auto px-4 py-16">
+        <div id="projects" className="mb-36">
+          <div className="container mx-auto px-4 py-4">
             <SectionHeader className="text-7xl">Projects</SectionHeader>
             <p className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-inter text-center max-w-4xl mx-auto leading-relaxed">
               Here you can showcase your key projects, highlighting the technologies used, challenges overcome, and outcomes achieved. Include links to live demos, GitHub repositories, and detailed case studies.
@@ -172,8 +189,8 @@ export default function Home() {
         </div>
 
         {/* School Involvement Section */}
-        <div id="school" className="pt-20">
-          <div className="container mx-auto px-4 py-16">
+        <div id="school" className="mb-36">
+          <div className="container mx-auto px-4 py-4">
             <SectionHeader className="text-7xl">School Involvement</SectionHeader>
             <p className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-inter text-center max-w-4xl mx-auto leading-relaxed">
               Highlight your academic achievements, extracurricular activities, leadership roles, and any research or special projects you've been involved with during your educational journey.
@@ -182,8 +199,8 @@ export default function Home() {
         </div>
 
         {/* Contact Me Section */}
-        <div id="contact" className="pt-20">
-          <div className="container mx-auto px-4 py-16">
+        <div id="contact" className="mb-36">
+          <div className="container mx-auto px-4 py-4">
             <SectionHeader className="text-7xl">Contact Me</SectionHeader>
             <p className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-inter text-center max-w-4xl mx-auto leading-relaxed">
               Get in touch! I'm always interested in new opportunities, collaborations, or just connecting with fellow professionals. Feel free to reach out through any of the channels below.
@@ -193,6 +210,8 @@ export default function Home() {
 
       </div>
 
+      {/* Scroll to Top Button */}
+      <ScrollToTop />
 
     </div>
   );
