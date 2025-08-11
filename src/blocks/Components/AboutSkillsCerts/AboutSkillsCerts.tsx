@@ -31,14 +31,14 @@ const AboutSkillsCerts: React.FC<Props> = ({
         </div>
 
         {/* Grid: Languages (left) + Certs (right) */}
-        <div className="mt-8 grid gap-6 lg:grid-cols-12">
+        <div className="mt-10 grid gap-6 lg:grid-cols-12">
           {/* Languages */}
           <div className="lg:col-span-6">
             <div className="grid grid-cols-3 sm:grid-cols-3 gap-3">
               {languages.map((lang) => (
                 <div
                   key={lang.name}
-                  className="group bg-black/50 rounded-xl shadow-md p-3 flex flex-col items-center gap-2 transition-all relative
+                  className="group bg-black/50 rounded-xl shadow-md p-2 sm:p-3 flex flex-col items-center gap-2 transition-all relative
                              hover:shadow-[0_0_30px_rgba(139,92,246,0.35)]"
                   style={{
                     background: 'linear-gradient(135deg, rgba(139, 92, 246, 0.3), rgba(59, 130, 246, 0.3))',
@@ -61,20 +61,20 @@ const AboutSkillsCerts: React.FC<Props> = ({
                   
                   {/* Content */}
                   <div className="relative z-10 flex flex-col items-center gap-2 w-full">
-                    <div className="relative rounded-xl grid place-items-center overflow-hidden" style={{ width: 'min(16vw, 4.5rem)', height: 'min(20vw, 6rem)' }}>
+                    <div className="relative rounded-xl grid place-items-center overflow-hidden w-14 h-16 sm:w-20 sm:h-24">
                       {lang.logoSrc ? (
                         // eslint-disable-next-line @next/next/no-img-element
                         <img
                           src={lang.logoSrc}
                           alt={lang.logoAlt ?? `${lang.name} logo`}
-                          className="w-full h-full object-contain p-1.5"
+                          className="w-full h-full object-contain p-1 sm:p-1.5"
                           loading="lazy"
                         />
                       ) : (
                         <span className="text-white/70 text-xs">{lang.name[0] || "•"}</span>
                       )}
                     </div>
-                    <span className="text-white font-inter text-center text-xs" style={{ fontSize: 'min(3vw, 1rem)' }}>
+                    <span className="text-white font-inter text-center text-xs sm:text-sm md:text-base">
                       {lang.name}
                     </span>
                   </div>
@@ -95,7 +95,7 @@ const AboutSkillsCerts: React.FC<Props> = ({
                   className="transition-all duration-300 hover:scale-110 group"
                   aria-label={c.title}
                 >
-                  <div className="relative w-65 h-65 rounded-xl overflow-hidden">
+                  <div className="relative w-30 h-30 sm:w-65 sm:h-65 rounded-xl overflow-hidden">
                     {/* Default image */}
                     <img
                       src={c.logoSrc}
@@ -120,7 +120,7 @@ const AboutSkillsCerts: React.FC<Props> = ({
         </div>
 
         {/* Download CV and Contact buttons */}
-        <div className="mt-8 flex justify-center gap-4">
+        <div className="mt-12 flex justify-center gap-4">
           <a
             href={cvHref}
             target="_blank"

@@ -57,17 +57,17 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
         {/* Content Section */}
         <div className="flex-1 min-w-0">
           <div className="flex items-start justify-between gap-4 mb-2">
-            <div>
-              <h3 className="text-white font-bold font-inter mb-1" style={{ fontSize: 'min(4vw, 1.25rem)' }}>
+            <div className="flex-1">
+              <h3 className="text-white text-xl font-bold font-inter mb-1">
                 {title}
               </h3>
               {company && (
-                <p className="text-purple-300 font-inter transition-colors duration-300 hover:text-purple-200" style={{ fontSize: 'min(3.5vw, 1rem)' }}>
+                <p className="text-purple-300 font-inter transition-colors duration-300 hover:text-purple-200">
                   {company}
                 </p>
               )}
             </div>
-            <div className="text-white/70 font-inter text-sm whitespace-nowrap" style={{ fontSize: 'min(3vw, 0.875rem)' }}>
+            <div className="text-white/70 font-inter text-sm whitespace-nowrap hidden sm:block">
               {start} – {end}
             </div>
           </div>

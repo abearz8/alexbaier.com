@@ -64,7 +64,7 @@ export default function Home() {
       <div className="relative z-10">
 
         {/* Hero Section */}
-        <div className="mt-10 flex justify-center">
+        <div className="mt-2 sm:mt-10 flex justify-center">
         </div>
         <div className="h-screen flex items-center justify-center">
           <div className="w-[90vw] text-center">
@@ -93,12 +93,12 @@ export default function Home() {
               />
               
             </div>
-            <div className="mt-20 flex justify-center">
+            <div className="mt-0 sm:mt-20 flex justify-center">
             </div>
 
             
             {/* Scroll Down Arrow */}
-            <div className="mt-16 flex justify-center">
+            <div className="mt-12 sm:mt-16 flex justify-center">
               <button 
                 onClick={() => {
                   const nextSection = document.getElementById('about');
@@ -112,19 +112,19 @@ export default function Home() {
                   }
                 }}
                 className="text-white font-bold font-inter transition-transform hover:scale-110 hover:text-purple-300 focus:outline-none p-3"
-                style={{ fontSize: 'min(6vw, 3rem)' }}
+                style={{ fontSize: 'min(4vw, 3rem) sm:min(6vw, 3rem)' }}
                 aria-label="Scroll to next section"
               >
                 <svg 
-                  width="70" 
-                  height="70" 
+                  width="50" 
+                  height="50" 
                   viewBox="0 0 24 24" 
                   fill="none" 
                   stroke="currentColor" 
                   strokeWidth="3" 
                   strokeLinecap="round" 
                   strokeLinejoin="round"
-                  className="animate-bounce"
+                  className="animate-bounce sm:w-[70px] sm:h-[70px]"
                   style={{ animationDuration: '2s' }}
                 >
                   <path d="M7 13l5 5 5-5"/>
@@ -135,18 +135,18 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mb-27"></div>
+        <div className="hidden sm:block mb-18"></div>
         
         {/* Navigation */}
         <Navigation />
         
         {/* About Me Section */}
-        <div id="about" className="mb-36">
-          <div className="container mx-auto px-4 py-8">
+        <div id="about" className="mb-20 sm:mb-36">
+          <div className="container mx-auto px-4 py-6">
           <SectionHeader className="text-7xl">About Me</SectionHeader>
           <div className="pt-6">
             <AboutSkillsCerts
-              blurb="I’m a product-minded developer studying Data Science + Business at Western and Ivey. I build and deploy projects with Python, Next.js/TypeScript, SQL, and AWS, and I’m eager to turn them into real products that bridge business and tech."
+              blurb="I'm a product-minded developer studying Data Science + Business at Western and Ivey. I build and deploy projects with Python, Next.js/TypeScript, SQL, and AWS, and I'm eager to turn them into real products that bridge business and tech."
               languages={[
                 { name: "Python", logoSrc: "/logos/python.png" },
                 { name: "Jupyter", logoSrc: "/logos/jupyter.png" },
@@ -176,8 +176,8 @@ export default function Home() {
         </div>
 
         {/* Experiences Section */}
-        <div id="experiences" className="mb-36">
-          <div className="container mx-auto px-4 py-8">
+        <div id="experiences" className="mb-20 sm:mb-36">
+          <div className="container mx-auto px-4 py-6">
             <SectionHeader className="text-7xl">Experiences</SectionHeader>
             
             {/* Experience Cards */}
@@ -188,8 +188,8 @@ export default function Home() {
         </div>
 
         {/* Projects Section */}
-        <div id="projects" className="mb-36">
-          <div className="container mx-auto px-4 py-8">
+        <div id="projects" className="mb-20 sm:mb-36">
+          <div className="container mx-auto px-4 py-6">
             <SectionHeader className="text-7xl">Projects</SectionHeader>
             <p className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-inter text-center max-w-4xl mx-auto leading-relaxed">
               Here you can showcase your key projects, highlighting the technologies used, challenges overcome, and outcomes achieved. Include links to live demos, GitHub repositories, and detailed case studies.
@@ -198,8 +198,8 @@ export default function Home() {
         </div>
 
         {/* School Involvement Section */}
-        <div id="school" className="mb-36">
-          <div className="container mx-auto px-4 py-8">
+        <div id="school" className="mb-20 sm:mb-36">
+          <div className="container mx-auto px-4 py-6">
             <SectionHeader className="text-7xl">School Involvement</SectionHeader>
             <p className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-inter text-center max-w-4xl mx-auto leading-relaxed">
               Highlight your academic achievements, extracurricular activities, leadership roles, and any research or special projects you've been involved with during your educational journey.
@@ -208,8 +208,8 @@ export default function Home() {
         </div>
 
         {/* Contact Me Section */}
-        <div id="contact" className="mb-36">
-          <div className="container mx-auto px-4 py-8">
+        <div id="contact" className="mb-20 sm:mb-36">
+          <div className="container mx-auto px-4 py-6">
             <SectionHeader className="text-7xl">Contact Me</SectionHeader>
             <p className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-inter text-center max-w-4xl mx-auto leading-relaxed">
               Get in touch! I'm always interested in new opportunities, collaborations, or just connecting with fellow professionals. Feel free to reach out through any of the channels below.
