@@ -6,11 +6,12 @@ import SectionHeader from "../blocks/Headers/SectionHeader/SectionHeader";
 import ScrollToTop from "../blocks/Components/ScrollToTop/ScrollToTop";
 import ExperienceList, { ExperienceItem } from "../blocks/Components/ExperienceStack/ExperienceList";
 import AboutSkillsCerts from "@/blocks/Components/AboutSkillsCerts/AboutSkillsCerts";
+import ContactMe from "@/blocks/Components/ContactMe/ContactMe";
 
 const experiences: ExperienceItem[] = [
   {
     title: "Grants and Recognition Coordinator",
-    company: "University Students' Council",
+    company: "Western University Students' Council",
     start: "September 2025",
     end: "Present",
     description:
@@ -208,12 +209,35 @@ export default function Home() {
         </div>
 
         {/* Contact Me Section */}
-        <div id="contact" className="mb-20 sm:mb-36">
+        <div id="contact" className="mb-12 sm:mb-24">
           <div className="container mx-auto px-4 py-6">
             <SectionHeader className="text-7xl">Contact Me</SectionHeader>
-            <p className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-inter text-center max-w-4xl mx-auto leading-relaxed">
-              Get in touch! I'm always interested in new opportunities, collaborations, or just connecting with fellow professionals. Feel free to reach out through any of the channels below.
-            </p>
+            <div className="mt-16">
+              <ContactMe 
+                contacts={[
+                  {
+                    name: "LinkedIn",
+                    href: "https://www.linkedin.com/in/alexanderbaier/",
+                    icon: "/logos/linkedin.png"
+                  },
+                  {
+                    name: "Email",
+                    href: "mailto:alexbaier@gmail.com",
+                    icon: "/logos/email.png"
+                  },
+                  {
+                    name: "GitHub",
+                    href: "https://github.com/abearz8",
+                    icon: "/logos/github.png"
+                  },
+                  {
+                    name: "Goodreads",
+                    href: "https://goodreads.com/alexbaier",
+                    icon: "/logos/goodreads.png"
+                  }
+                ]}
+              />
+            </div>
           </div>
         </div>
 
