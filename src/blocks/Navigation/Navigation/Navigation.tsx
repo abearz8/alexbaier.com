@@ -15,7 +15,7 @@ const Navigation = () => {
 
     const computeThreshold = () => {
       const aboutAbsTop = about.getBoundingClientRect().top + window.scrollY;
-      thresholdRef.current = Math.max(aboutAbsTop - 80, 0);
+      thresholdRef.current = Math.max(aboutAbsTop - 200, 0);
     };
 
     const onScroll = () => {
@@ -87,7 +87,7 @@ const Navigation = () => {
       <div
         className={`${
           isMenuOpen ? 'flex' : 'hidden'
-        } md:flex bg-black/95 md:bg-black/80 backdrop-blur-sm rounded-2xl md:rounded-full p-4 md:p-2 border border-white/20 flex-col md:flex-row min-w-[200px] md:min-w-0 md:w-auto`}
+        } md:flex bg-black rounded-2xl md:rounded-full p-4 md:p-2 border border-white/20 flex-col md:flex-row min-w-[200px] md:min-w-0 md:w-auto shadow-[0_0_30px_rgba(139,92,246,0.5)]`}
       >
         <ul className="flex flex-col md:flex-row gap-2">
           {['about', 'experiences', 'projects', 'school', 'contact'].map((section) => (

@@ -103,7 +103,12 @@ export default function Home() {
                 onClick={() => {
                   const nextSection = document.getElementById('about');
                   if (nextSection) {
-                    nextSection.scrollIntoView({ behavior: 'smooth' });
+                    const elementPosition = nextSection.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - 80; 
+                    window.scrollTo({
+                      top: offsetPosition,
+                      behavior: 'smooth'
+                    });
                   }
                 }}
                 className="text-white font-bold font-inter transition-transform hover:scale-110 hover:text-purple-300 focus:outline-none p-3"
@@ -129,17 +134,19 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        <div className="mb-27"></div>
         
         {/* Navigation */}
         <Navigation />
         
         {/* About Me Section */}
-        <div id="about" className="pt-20 mb-36">
-          <div className="container mx-auto px-4 py-16">
+        <div id="about" className="mb-36">
+          <div className="container mx-auto px-4 py-8">
           <SectionHeader className="text-7xl">About Me</SectionHeader>
           <div className="pt-6">
             <AboutSkillsCerts
-              blurb="I’m a 3rd-year Ivey + Data Science student who loves building practical software that bridges business and tech."
+              blurb="I’m a product-minded developer studying Data Science + Business at Western and Ivey. I build and deploy projects with Python, Next.js/TypeScript, SQL, and AWS, and I’m eager to turn them into real products that bridge business and tech."
               languages={[
                 { name: "Python", logoSrc: "/logos/python.png" },
                 { name: "Jupyter", logoSrc: "/logos/jupyter.png" },
@@ -152,15 +159,17 @@ export default function Home() {
                 {
                   title: "AWS Certified AI Practitioner",
                   href: "https://www.credly.com/badges/50d92a93-f7cb-4200-9757-e92482e5c6cf/public_url",        
-                  logoSrc: "/logos/CAI_Badge.png",
+                  logoSrc: "/logos/aws-ai.png",
+                  borderedLogoSrc: "/logos/aws-ai-bordered.png",
                 },
                 {
                   title: "AWS Certified Cloud Practitioner",
                   href: "https://www.credly.com/badges/eb74cee7-e130-47df-bba9-e018b839dc74/public_url",        
-                  logoSrc: "/logos/CPP_Badge.png",
+                  logoSrc: "/logos/aws-cloud.png",
+                  borderedLogoSrc: "/logos/aws-cloud-bordered.png",
                 },
               ]}
-              cvHref="/Alex_Baer_CV.pdf"
+              cvHref="https://docs.google.com/document/d/1v4zfolOO6jvOjAXZaRmk57VCiLkeD4xrJb9o3LN5Mvc/edit?usp=sharing"
             />
             </div>
           </div>
@@ -168,7 +177,7 @@ export default function Home() {
 
         {/* Experiences Section */}
         <div id="experiences" className="mb-36">
-          <div className="container mx-auto px-4 py-4">
+          <div className="container mx-auto px-4 py-8">
             <SectionHeader className="text-7xl">Experiences</SectionHeader>
             
             {/* Experience Cards */}
@@ -180,7 +189,7 @@ export default function Home() {
 
         {/* Projects Section */}
         <div id="projects" className="mb-36">
-          <div className="container mx-auto px-4 py-4">
+          <div className="container mx-auto px-4 py-8">
             <SectionHeader className="text-7xl">Projects</SectionHeader>
             <p className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-inter text-center max-w-4xl mx-auto leading-relaxed">
               Here you can showcase your key projects, highlighting the technologies used, challenges overcome, and outcomes achieved. Include links to live demos, GitHub repositories, and detailed case studies.
@@ -190,7 +199,7 @@ export default function Home() {
 
         {/* School Involvement Section */}
         <div id="school" className="mb-36">
-          <div className="container mx-auto px-4 py-4">
+          <div className="container mx-auto px-4 py-8">
             <SectionHeader className="text-7xl">School Involvement</SectionHeader>
             <p className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-inter text-center max-w-4xl mx-auto leading-relaxed">
               Highlight your academic achievements, extracurricular activities, leadership roles, and any research or special projects you've been involved with during your educational journey.
@@ -200,7 +209,7 @@ export default function Home() {
 
         {/* Contact Me Section */}
         <div id="contact" className="mb-36">
-          <div className="container mx-auto px-4 py-4">
+          <div className="container mx-auto px-4 py-8">
             <SectionHeader className="text-7xl">Contact Me</SectionHeader>
             <p className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-inter text-center max-w-4xl mx-auto leading-relaxed">
               Get in touch! I'm always interested in new opportunities, collaborations, or just connecting with fellow professionals. Feel free to reach out through any of the channels below.

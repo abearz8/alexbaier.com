@@ -36,7 +36,7 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
   const logoAlt = company ? `${company} logo` : "Company logo";
 
   const CardContent = () => (
-    <div className="bg-black/60 backdrop-blur-md rounded-xl p-4 border border-white/20 mb-4 shadow-lg transition-all duration-300 hover:bg-black/70 hover:scale-105 hover:border-purple-400/40 hover:shadow-xl">
+    <div className="bg-black/40 backdrop-blur-md rounded-xl p-4 border border-white/20 mb-4 shadow-lg transition-all duration-300 hover:bg-black/40 hover:scale-105 hover:border-purple-400/40 hover:shadow-xl">
       <div className="flex items-center gap-8">
         {/* Logo Section */}
         <div className="relative shrink-0 rounded-2xl grid place-items-center overflow-hidden transition-colors duration-300" style={{ width: 'min(20vw, 9rem)', height: 'min(20vw, 9rem)' }}>
