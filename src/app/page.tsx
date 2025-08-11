@@ -1,103 +1,111 @@
-import Image from "next/image";
+"use client"
+import Particles from "../blocks/Backgrounds/Particles/Particles";
+import Orb from "../blocks/Backgrounds/Orb/Orb";
+import RotatingText from "../blocks/TextAnimations/RotatingText/RotatingText";
+
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+    <div>
+      <div className="fixed inset-0 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">
+        <Particles
+          particleColors={['#8B5CF6']}
+          particleCount={4000}
+          particleSpread={80}
+          speed={0.3}
+          particleBaseSize={3000}
+          moveParticlesOnHover={false}
+          alphaParticles={false}
+          disableRotation={true}
+          className="absolute inset-0 pointer-events-none"
         />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+        
+        {/* Filter overlay to reduce particle visibility */}
+        <div className="absolute inset-0 bg-black/70 backdrop-blur-[1px] pointer-events-none"></div>
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Contents above background */}
+      <div className="relative z-10">
+
+        {/* Hero Section */}
+        <div className="mt-10 flex justify-center">
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <div className="h-screen flex items-center justify-center">
+          <div className="w-[90vw] text-center">
+            <div className="flex items-center justify-center gap-3 flex-wrap">
+              <div className="text-white font-bold leading-tight font-inter tracking-tight" style={{ fontSize: 'min(8vw, 6rem)' }}>
+                 Hi, my name's Alex!<br />
+               </div>
+               <div className="w-full h-4 sm:h-6 md:h-8"></div>
+               <div className="text-white font-bold leading-tight font-inter tracking-tight" style={{ fontSize: 'min(8vw, 6rem)' }}>
+                 I'm a 
+               </div>
+              <span className="inline-block w-[1vw]"></span>
+              
+              <RotatingText
+                texts={['Data Scientist', 'Strategist', 'Developer', 'Innovator']}
+                mainClassName="px-3 py-2 sm:px-4 sm:py-2 md:px-5 md:py-3 lg:px-6 lg:py-3 xl:px-6 xl:py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white overflow-hidden rounded-xl shadow-lg border border-white/20 font-bold font-inter leading-tight"
+                style={{ fontSize: 'min(8vw, 6rem)' }}
+                staggerFrom={"last"}
+                initial={{ y: "100%" }}
+                animate={{ y: 0 }}
+                exit={{ y: "-120%" }}
+                staggerDuration={0.025}
+                splitLevelClassName="overflow-hidden"
+                transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                rotationInterval={3500}
+              />
+              
+            </div>
+            <div className="mt-20 flex justify-center">
+            </div>
+            {/* Scroll Down Arrow */}
+            <div className="mt-16 flex justify-center">
+              <button 
+                onClick={() => {
+                  const nextSection = document.getElementById('next-section');
+                  if (nextSection) {
+                    nextSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                className="text-white font-bold font-inter transition-transform hover:scale-110 hover:text-purple-300 focus:outline-none p-3"
+                style={{ fontSize: 'min(6vw, 3rem)' }}
+                aria-label="Scroll to next section"
+              >
+                <svg 
+                  width="70" 
+                  height="70" 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  strokeWidth="3" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                  className="animate-bounce"
+                  style={{ animationDuration: '2s' }}
+                >
+                  <path d="M7 13l5 5 5-5"/>
+                  <path d="M7 6l5 5 5-5"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        {/* About Me Section */}
+        <div id="next-section" className="min-h-screen pt-20">
+          <div className="container mx-auto px-4 py-16">
+            <h2 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold font-inter text-center mb-8">
+              About Me
+            </h2>
+            <p className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-inter text-center max-w-4xl mx-auto leading-relaxed">
+              Welcome to the next section of my portfolio! This is where you can add more content about yourself, your projects, or any other sections you'd like to include.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+
     </div>
   );
 }
