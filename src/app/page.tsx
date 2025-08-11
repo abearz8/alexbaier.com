@@ -2,6 +2,8 @@
 import Particles from "../blocks/Backgrounds/Particles/Particles";
 import Orb from "../blocks/Backgrounds/Orb/Orb";
 import RotatingText from "../blocks/TextAnimations/RotatingText/RotatingText";
+import Navigation from "../blocks/Navigation/Navigation/Navigation";
+import SectionHeader from "../blocks/Headers/SectionHeader/SectionHeader";
 
 
 export default function Home() {
@@ -53,7 +55,7 @@ export default function Home() {
                 staggerDuration={0.025}
                 splitLevelClassName="overflow-hidden"
                 transition={{ type: "spring", damping: 30, stiffness: 400 }}
-                rotationInterval={3500}
+                rotationInterval={3000}
               />
               
             </div>
@@ -63,7 +65,7 @@ export default function Home() {
             <div className="mt-16 flex justify-center">
               <button 
                 onClick={() => {
-                  const nextSection = document.getElementById('next-section');
+                  const nextSection = document.getElementById('about');
                   if (nextSection) {
                     nextSection.scrollIntoView({ behavior: 'smooth' });
                   }
@@ -91,14 +93,100 @@ export default function Home() {
             </div>
           </div>
         </div>
+        
+        {/* Navigation */}
+        <Navigation />
+        
         {/* About Me Section */}
-        <div id="next-section" className="min-h-screen pt-20">
+        <div id="about" className="pt-20">
           <div className="container mx-auto px-4 py-16">
-            <h2 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold font-inter text-center mb-8">
-              About Me
-            </h2>
+          <SectionHeader className="text-7xl">About Me</SectionHeader>
             <p className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-inter text-center max-w-4xl mx-auto leading-relaxed">
               Welcome to the next section of my portfolio! This is where you can add more content about yourself, your projects, or any other sections you'd like to include.
+            </p>
+          </div>
+        </div>
+
+        {/* Experiences Section */}
+        <div id="experiences" className="pt-20">
+          <div className="container mx-auto px-4 py-16">
+            <SectionHeader className="text-7xl">Experiences</SectionHeader>
+            <div className="max-w-6xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-8">
+                {/* Experience Card 1 */}
+                <div className="bg-black/20 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                  <h3 className="text-white text-2xl font-bold font-inter mb-2">
+                    Software Engineer
+                  </h3>
+                  <p className="text-purple-300 font-inter mb-2">Tech Company • 2022 - Present</p>
+                  <p className="text-white/80 font-inter leading-relaxed">
+                    Developed scalable web applications using modern technologies. Led team projects and mentored junior developers.
+                  </p>
+                </div>
+
+                {/* Experience Card 2 */}
+                <div className="bg-black/20 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                  <h3 className="text-white text-2xl font-bold font-inter mb-2">
+                    Data Scientist
+                  </h3>
+                  <p className="text-purple-300 font-inter mb-2">Analytics Firm • 2020 - 2022</p>
+                  <p className="text-white/80 font-inter leading-relaxed">
+                    Built machine learning models and data pipelines. Analyzed large datasets to drive business decisions.
+                  </p>
+                </div>
+
+                {/* Experience Card 3 */}
+                <div className="bg-black/20 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                  <h3 className="text-white text-2xl font-bold font-inter mb-2">
+                    Frontend Developer
+                  </h3>
+                  <p className="text-purple-300 font-inter mb-2">Startup • 2019 - 2020</p>
+                  <p className="text-white/80 font-inter leading-relaxed">
+                    Created responsive user interfaces and improved user experience. Collaborated with design and backend teams.
+                  </p>
+                </div>
+
+                {/* Experience Card 4 */}
+                <div className="bg-black/20 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                  <h3 className="text-white text-2xl font-bold font-inter mb-2">
+                    Research Assistant
+                  </h3>
+                  <p className="text-purple-300 font-inter mb-2">University • 2018 - 2019</p>
+                  <p className="text-white/80 font-inter leading-relaxed">
+                    Conducted research in computer science. Published papers and presented findings at conferences.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Projects Section */}
+        <div id="projects" className="pt-20">
+          <div className="container mx-auto px-4 py-16">
+            <SectionHeader className="text-7xl">Projects</SectionHeader>
+            <p className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-inter text-center max-w-4xl mx-auto leading-relaxed">
+              Here you can showcase your key projects, highlighting the technologies used, challenges overcome, and outcomes achieved. Include links to live demos, GitHub repositories, and detailed case studies.
+            </p>
+          </div>
+        </div>
+
+        {/* School Involvement Section */}
+        <div id="school" className="pt-20">
+          <div className="container mx-auto px-4 py-16">
+            <SectionHeader className="text-7xl">School Involvement</SectionHeader>
+            <p className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-inter text-center max-w-4xl mx-auto leading-relaxed">
+              Highlight your academic achievements, extracurricular activities, leadership roles, and any research or special projects you've been involved with during your educational journey.
+            </p>
+          </div>
+        </div>
+
+        {/* Contact Me Section */}
+        <div id="contact" className="pt-20">
+          <div className="container mx-auto px-4 py-16">
+            <SectionHeader className="text-7xl">Contact Me</SectionHeader>
+            <p className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-inter text-center max-w-4xl mx-auto leading-relaxed">
+              Get in touch! I'm always interested in new opportunities, collaborations, or just connecting with fellow professionals. Feel free to reach out through any of the channels below.
             </p>
           </div>
         </div>

@@ -13,6 +13,17 @@
   --font-inter: var(--font-inter);
 }
 
+/* Section Header Styles */
+.section-heading {
+  position: relative;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-top: 9rem;
+  margin-bottom: 13rem;
+  z-index: 9999;
+  text-align: center;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
