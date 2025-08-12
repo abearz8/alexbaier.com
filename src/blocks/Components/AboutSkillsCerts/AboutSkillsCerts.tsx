@@ -9,7 +9,6 @@ type Props = {
   blurb: string;
   languages: Language[];
   certs: Cert[]; // expect 2, but supports any
-  cvHref: string;
   className?: string;
 };
 
@@ -17,7 +16,6 @@ const AboutSkillsCerts: React.FC<Props> = ({
   blurb,
   languages,
   certs,
-  cvHref,
   className = "",
 }) => {
   return (
@@ -31,15 +29,14 @@ const AboutSkillsCerts: React.FC<Props> = ({
         </div>
 
         {/* Grid: Languages (left) + Certs (right) */}
-        <div className="mt-10 grid gap-6 lg:grid-cols-12">
+        <div className="mt-12 grid gap-6 lg:grid-cols-12">
           {/* Languages */}
           <div className="lg:col-span-6">
             <div className="grid grid-cols-3 sm:grid-cols-3 gap-3">
               {languages.map((lang) => (
                 <div
                   key={lang.name}
-                  className="group bg-black/50 rounded-xl shadow-md p-2 sm:p-3 flex flex-col items-center gap-2 transition-all relative
-                             hover:shadow-[0_0_30px_rgba(139,92,246,0.35)]"
+                  className="group bg-black/50 rounded-xl shadow-md p-2 sm:p-3 flex flex-col items-center gap-2 transition-all relative"
                   style={{
                     background: 'linear-gradient(135deg, rgba(139, 92, 246, 0.3), rgba(59, 130, 246, 0.3))',
                     backgroundClip: 'padding-box',
@@ -117,56 +114,6 @@ const AboutSkillsCerts: React.FC<Props> = ({
               ))}
             </div>
           </div>
-        </div>
-
-        {/* Download CV and Contact buttons */}
-        <div className="mt-12 flex justify-center gap-4">
-          <a
-            href={cvHref}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="relative inline-flex items-center justify-center rounded-xl border border-white/20
-                       bg-slate-900/40 px-6 py-3 md:px-7 md:py-3.5 text-white font-inter font-semibold
-                       overflow-hidden transition-colors duration-300 group w-44 text-center
-                       hover:bg-gradient-to-r hover:from-purple-600 hover:to-blue-500"
-            style={{ fontSize: 'min(3.5vw, 1rem)' }}
-          >
-            {/* sweep overlay */}
-            <span
-              className="pointer-events-none absolute inset-0 -translate-x-full
-                         bg-[linear-gradient(110deg,transparent,rgba(255,255,255,0.2),transparent)]
-                         transition-transform duration-500 group-hover:translate-x-full"
-            />
-            <span className="relative">Download CV</span>
-          </a>
-
-          <a
-            href="#contact"
-            onClick={(e) => {
-              e.preventDefault();
-              const contactSection = document.getElementById('contact');
-              if (contactSection) {
-                const elementPosition = contactSection.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - 80;
-                window.scrollTo({
-                  top: offsetPosition,
-                  behavior: 'smooth'
-                });
-              }
-            }}
-            className="relative inline-flex items-center justify-center rounded-xl border border-white/20
-                       bg-gradient-to-r from-purple-600 to-blue-500 px-6 py-3 md:px-7 md:py-3.5 text-white font-inter font-semibold
-                       overflow-hidden transition-all duration-300 w-44 text-center group hover:from-fuchsia-500 hover:to-purple-500 cursor-pointer"
-            style={{ fontSize: 'min(3.5vw, 1rem)' }}
-          >
-            {/* sweep overlay */}
-            <span
-              className="pointer-events-none absolute inset-0 -translate-x-full
-                         bg-[linear-gradient(110deg,transparent,rgba(255,255,255,0.2),transparent)]
-                         transition-transform duration-500 group-hover:translate-x-full"
-            />
-            <span className="relative">Contact Me</span>
-          </a>
         </div>
       </div>
     </section>

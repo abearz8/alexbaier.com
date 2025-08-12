@@ -23,7 +23,7 @@ const Navigation = () => {
       setIsSticky(window.scrollY >= thresholdRef.current);
 
       // ----- Active section logic -----
-      const sections = ['about', 'experiences', 'projects', 'school', 'contact'];
+      const sections = ['about', 'experiences', 'school', 'projects', 'contact'];
       const winH = window.innerHeight;
 
       // Near bottom → 'contact'
@@ -37,7 +37,7 @@ const Navigation = () => {
         if (!el) continue;
         const { top, bottom } = el.getBoundingClientRect();
         const center = (top + bottom) / 2;
-        if (center <= winH * 0.6 && center >= 0) {
+        if (center <= winH * 0.8 && center >= 0) {
           setActiveSection(section);
           break;
         }
@@ -90,7 +90,7 @@ const Navigation = () => {
         } md:flex bg-black rounded-2xl md:rounded-full p-4 md:p-2 border border-white/20 flex-col md:flex-row min-w-[200px] md:min-w-0 md:w-auto shadow-[0_0_30px_rgba(139,92,246,0.5)]`}
       >
         <ul className="flex flex-col md:flex-row gap-2">
-          {['about', 'experiences', 'projects', 'school', 'contact'].map((section) => (
+          {['about', 'experiences', 'school', 'projects', 'contact'].map((section) => (
             <li key={section}>
               <button
                 onClick={() => scrollToSection(section)}

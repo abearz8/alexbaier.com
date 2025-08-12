@@ -7,6 +7,8 @@ import ScrollToTop from "../blocks/Components/ScrollToTop/ScrollToTop";
 import ExperienceList, { ExperienceItem } from "../blocks/Components/ExperienceStack/ExperienceList";
 import AboutSkillsCerts from "@/blocks/Components/AboutSkillsCerts/AboutSkillsCerts";
 import ContactMe from "@/blocks/Components/ContactMe/ContactMe";
+import ProjectShowcase from "@/blocks/Components/ProjectShowcase/ProjectShowcase";
+import EASection from "@/blocks/Components/EASection/EASection";
 
 const experiences: ExperienceItem[] = [
   {
@@ -145,7 +147,7 @@ export default function Home() {
         <div id="about" className="mb-20 sm:mb-36">
           <div className="container mx-auto px-4 py-6">
           <SectionHeader className="text-7xl">About Me</SectionHeader>
-          <div className="pt-6">
+          <div className="mt-16">
             <AboutSkillsCerts
               blurb="I'm a product-minded developer studying Data Science + Business at Western and Ivey. I build and deploy projects with Python, Next.js/TypeScript, SQL, and AWS, and I'm eager to turn them into real products that bridge business and tech."
               languages={[
@@ -170,7 +172,6 @@ export default function Home() {
                   borderedLogoSrc: "/logos/aws-cloud-bordered.png",
                 },
               ]}
-              cvHref="https://docs.google.com/document/d/1v4zfolOO6jvOjAXZaRmk57VCiLkeD4xrJb9o3LN5Mvc/edit?usp=sharing"
             />
             </div>
           </div>
@@ -183,33 +184,117 @@ export default function Home() {
             
             {/* Experience Cards */}
             <div className="mt-16">
-              <ExperienceList items={experiences} className="max-w-6xl mx-auto" />
+              <ExperienceList 
+                items={experiences} 
+                className="max-w-6xl mx-auto" 
+              />
             </div>
           </div>
         </div>
-
-        {/* Projects Section */}
-        <div id="projects" className="mb-20 sm:mb-36">
-          <div className="container mx-auto px-4 py-6">
-            <SectionHeader className="text-7xl">Projects</SectionHeader>
-            <p className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-inter text-center max-w-4xl mx-auto leading-relaxed">
-              Here you can showcase your key projects, highlighting the technologies used, challenges overcome, and outcomes achieved. Include links to live demos, GitHub repositories, and detailed case studies.
-            </p>
-          </div>
-        </div>
-
+        
         {/* School Involvement Section */}
         <div id="school" className="mb-20 sm:mb-36">
           <div className="container mx-auto px-4 py-6">
             <SectionHeader className="text-7xl">School Involvement</SectionHeader>
-            <p className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-inter text-center max-w-4xl mx-auto leading-relaxed">
-              Highlight your academic achievements, extracurricular activities, leadership roles, and any research or special projects you've been involved with during your educational journey.
-            </p>
+            <div className="mt-16">
+              <EASection
+                className="max-w-6xl mx-auto"
+                extracurriculars={[
+                  {
+                    org: "Orientation Leader (Soph)",
+                    position: "Western University Housing",
+                    description:
+                      "Led a 6-person committee, managed a $100K grants budget, and produced the year-end recognition gala.",
+                    logoSrc: "/logos/usc.svg",
+                  },
+                  {
+                    org: "Arbitrage Analyst",
+                    position: "Mustang Capital",
+                    description:
+                      "Supported orientation programming and student events across campus.",
+                    logoSrc: "/logos/ivey.svg",
+                  },
+                  {
+                    org: "Advocacy Intern",
+                    position: "Active Minds Western",
+                    description:
+                      "Participated in workshops and project sprints focused on ML and analytics.",
+                    logoSrc: "/logos/dsc.svg",
+                  },
+                ]}
+                awards={[
+                  {
+                    title: "National Scholar",
+                    description: "Recognized for academic excellence and leadership.",
+                    iconSrc: "/logos/Western.png",
+                  },
+                  {
+                    title: "Dean’s Honour List",
+                    description: "Awarded for top academic performance.",
+                    iconSrc: "/logos/Western.png",
+                  },
+                  {
+                    title: "Hackathon Finalist",
+                    description: "Built a prototype that connects business needs with tech.",
+                    iconSrc: "/logos/Ivey.png",
+                  },
+                ]}
+              />
+            </div>
+          </div>
+        </div>
+        
+        {/* Projects Section */}
+        <div id="projects" className="mb-20 sm:mb-36">
+          <div className="container mx-auto px-4 py-6">
+            <SectionHeader className="text-7xl">Projects</SectionHeader>
+            <div className="mt-16">
+              <ProjectShowcase
+                title="lifeinvader — Social Media App"
+                description="Full-stack social app with React, Node.js, Express, MongoDB, Socket.io, and AWS S3."
+                imageSrc="/projects/lifeinvader.png"
+                imageAlt="lifeinvader app screenshot"
+                liveHref="https://your-live-demo.com/lifeinvader"
+                githubHref="https://github.com/you/lifeinvader"
+                align="right"
+              />
+
+              <ProjectShowcase
+                title="Retro-Sketch — Pixel Sketch App"
+                description="Create pixel art with multiple tools, palettes, and exports."
+                imageSrc="/projects/retrosketch.png"
+                imageAlt="Retro-Sketch app screenshot"
+                liveHref="https://your-live-demo.com/retrosketch"
+                githubHref="https://github.com/you/retrosketch"
+                align="left"
+              />
+
+              <ProjectShowcase
+                title="lifeinvader — Social Media App"
+                description="Full-stack social app with React, Node.js, Express, MongoDB, Socket.io, and AWS S3."
+                imageSrc="/projects/lifeinvader2.png"
+                imageAlt="lifeinvader app screenshot"
+                liveHref="https://your-live-demo.com/lifeinvader"
+                githubHref="https://github.com/you/lifeinvader"
+                align="right"
+              />
+
+              <ProjectShowcase
+                title="Retro-Sketch — Pixel Sketch App"
+                description="Create pixel art with multiple tools, palettes, and exports."
+                imageSrc="/projects/retrosketch.png"
+                imageAlt="Retro-Sketch app screenshot"
+                liveHref="https://your-live-demo.com/retrosketch"
+                githubHref="https://github.com/you/retrosketch"
+                align="left"
+              />
+            </div>
           </div>
         </div>
 
+
         {/* Contact Me Section */}
-        <div id="contact" className="mb-12 sm:mb-24">
+        <div id="contact" className="mb-20 sm:mb-36">
           <div className="container mx-auto px-4 py-6">
             <SectionHeader className="text-7xl">Contact Me</SectionHeader>
             <div className="mt-16">

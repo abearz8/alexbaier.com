@@ -44,7 +44,7 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
             <img
               src={logoSrc}
               alt={logoAlt}
-              className="w-full h-full object-contain p-3"
+              className="w-3/4 h-full object-contain p-3"
               loading="lazy"
             />
           ) : (
@@ -99,7 +99,7 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
         href={companyUrl} 
         target="_blank" 
         rel="noopener noreferrer"
-        className="block transition-transform duration-300 hover:scale-105"
+        className="block transition-transform duration-300 hover:scale-102"
       >
         <CardContent />
       </a>
@@ -118,6 +118,28 @@ const ExperienceList: React.FC<{ items: ExperienceItem[]; className?: string }> 
       {items.map((item, index) => (
         <ExperienceCard key={index} {...item} />
       ))}
+      
+      {/* See Full CV Button */}
+      <div className="mt-8 flex justify-center">
+        <a
+          href="https://docs.google.com/document/d/1v4zfolOO6jvOjAXZaRmk57VCiLkeD4xrJb9o3LN5Mvc/edit?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative inline-flex items-center justify-center rounded-xl border border-white/20
+                     bg-slate-900/40 px-6 py-3 md:px-7 md:py-3.5 text-white font-inter font-semibold
+                     overflow-hidden transition-colors duration-300 group w-full max-w-6xl text-center
+                     hover:bg-gradient-to-r hover:from-purple-600 hover:to-blue-500"
+          style={{ fontSize: 'min(3.5vw, 1rem)' }}
+        >
+          {/* sweep overlay */}
+          <span
+            className="pointer-events-none absolute inset-0 -translate-x-full
+                       bg-[linear-gradient(110deg,transparent,rgba(255,255,255,0.2),transparent)]
+                       transition-transform duration-500 group-hover:translate-x-full"
+          />
+          <span className="relative">See Full CV</span>
+        </a>
+      </div>
     </div>
   );
 };
