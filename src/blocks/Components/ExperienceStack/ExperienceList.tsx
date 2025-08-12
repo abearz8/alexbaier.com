@@ -39,7 +39,7 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
     <div className="bg-black/40 backdrop-blur-md rounded-xl p-4 border border-white/20 mb-4 shadow-lg transition-all duration-300 hover:bg-black/50 hover:scale-105 hover:border-purple-400/60 hover:shadow-[0_0_30px_rgba(139,92,246,0.35)]">
       <div className="flex items-center gap-8">
         {/* Logo Section */}
-        <div className="relative shrink-0 rounded-2xl grid place-items-center overflow-hidden transition-colors duration-300 hidden sm:grid" style={{ width: 'min(20vw, 9rem)', height: 'min(20vw, 9rem)' }}>
+        <div className="relative shrink-0 rounded-2xl grid place-items-center overflow-hidden transition-colors duration-300 hidden sm:grid" style={{ width: 'min(25vw, 11rem)', height: 'min(20vw, 9rem)' }}>
           {logoSrc ? (
             <img
               src={logoSrc}
@@ -127,7 +127,7 @@ const ExperienceList: React.FC<{ items: ExperienceItem[]; className?: string }> 
           rel="noopener noreferrer"
           className="relative inline-flex items-center justify-center rounded-xl border border-white/20
                      bg-slate-900/40 px-6 py-3 md:px-7 md:py-3.5 text-white font-inter font-semibold
-                     overflow-hidden transition-colors duration-300 group w-full max-w-6xl text-center
+                     overflow-hidden transition-colors duration-300 group w-full text-center
                      hover:bg-gradient-to-r hover:from-purple-600 hover:to-blue-500"
           style={{ fontSize: 'min(3.5vw, 1rem)' }}
         >

@@ -17,7 +17,7 @@ const experiences: ExperienceItem[] = [
     start: "September 2025",
     end: "Present",
     description:
-      "Part time work - Lead a six person committee to manage the $100,000+ budget for student events and initiatives and deliberate on student awards.",
+      "Part-time work - Led a six-person committee to manage the $100,000+ budget for student events and initiatives and $20,000 in student awards.",
     skills: ["Team Leadership", "Grant Evaluation", "Communication"],
     companyUrl: "https://westernusc.ca/services/grants-and-recognition/",
   },
@@ -33,12 +33,12 @@ const experiences: ExperienceItem[] = [
   },
   {
     title: "Software and Business Analyst",
-    company: "Lakeside Psychological and Educational",
+    company: "Lakeside Psychological and Educational Services",
     start: "May 2024",
     end: "April 2025",
     description:
-      "Built practice's digital foundation by deploying on AWS (site, storage, access), configuring professional email and domains, and setting up core office IT.",
-    skills: ["AWS", "Email and Domain Admin", "Device Set Up", "Security Policies"],
+      "Built practice's digital foundation on AWS (site, storage, access), configured professional email and domains, and set up core office IT.",
+    skills: ["AWS", "Email and Domain Admin", "Device Setup", "Security Policies"],
     companyUrl: "https://www.lakesidepes.ca",
   }
 ];
@@ -186,7 +186,6 @@ export default function Home() {
             <div className="mt-16">
               <ExperienceList 
                 items={experiences} 
-                className="max-w-6xl mx-auto" 
               />
             </div>
           </div>
@@ -198,7 +197,6 @@ export default function Home() {
             <SectionHeader className="text-7xl">School Involvement</SectionHeader>
             <div className="mt-16">
               <EASection
-                className="max-w-6xl mx-auto"
                 extracurriculars={[
                   {
                     org: "Orientation Leader (Soph)",
@@ -218,24 +216,24 @@ export default function Home() {
                     org: "Advocacy Intern",
                     position: "Active Minds Western",
                     description:
-                      "Researched and provided reccomendations to university leadership to strengthen campus mental-health support and awareness for students at Western.",
+                      "Researched and provided recommendations to university leadership to strengthen campus mental health support and awareness for students at Western.",
                     logoSrc: "/logos/dsc.svg",
                   },
                 ]}
                 awards={[
                   {
                     title: "President's Scholar",
-                    description: "Recognized for outstanding academic achievement and leadership ($50,000 over 4 years).",
+                    description: "Recognized for outstanding academic achievement and leadership ($50,000 / 4 years).",
                     iconSrc: "/logos/Western.png",
                   },
                   {
-                    title: "2 Time Dean's Honour List",
-                    description: "Achieved a Cumulative GPA of 3.93 / 4.0 or 92% first and second year average in BSc program.",
+                    title: "Dean's Honour List",
+                    description: "Achieved a cumulative GPA of 3.93 / 4.0 or 92% first and second year average in BSc program.",
                     iconSrc: "/logos/Western.png",
                   },
                   {
                     title: "John R. Currie Award in Entrepreneurship",
-                    description: "Recognized for entreprenurial spirit, leadership, and community involvement ($8,000).",
+                    description: "Recognized for entrepreneurial spirit, leadership, and community involvement ($8,000).",
                     iconSrc: "/logos/Ivey.png",
                   },
                 ]}
@@ -251,7 +249,7 @@ export default function Home() {
             <div className="mt-16">
               <ProjectShowcase
                 title="Lakeside Website"
-                description="Production site for Lakeside Psychological & Educational Services — static HTML/CSS/JS (initially Webflow, finished by hand) hosted on AWS S3 with static-site config."
+                description="Production site for Lakeside Psychological & Educational Services. Static HTML/CSS/JS (initially Webflow, finished by hand) hosted on AWS S3 with static-site config."
                 imageSrc="/projects/lakeside.png"
                 smallImageSrc="/projects/lakeside_small.png"
                 imageAlt="LakesidePES Screenshot"

@@ -191,7 +191,7 @@ const EASection: React.FC<EASectionProps> = ({
                     className="ea-card group relative rounded-2xl border-2 border-white/20 bg-black/50 backdrop-blur-md p-5 shadow-lg transition-all duration-300"
                   >
                     <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
-                      <div className="w-full h-16 mb-6 flex items-center justify-center">
+                      <div className={`w-full h-16 ${award.iconSrc?.includes('Ivey') ? 'mb-4 mt-2' : 'mb-6'} flex items-center justify-center`}>
                         <img src={award.iconSrc} alt={`${award.title} icon`} className="max-w-[70%] max-h-full object-contain" loading="lazy" />
                       </div>
                       <h4 className="text-white text-lg sm:text-xl lg:text-2xl font-bold font-inter mb-2">{award.title}</h4>

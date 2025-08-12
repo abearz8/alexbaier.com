@@ -20,7 +20,7 @@ const AboutSkillsCerts: React.FC<Props> = ({
 }) => {
   return (
     <section className={`relative w-full ${className}`}>
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="w-full px-4">
         {/* Blurb */}
         <div className="bg-black/40 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg px-6 py-6 md:px-8 md:py-8">
           <p className="text-white/90 font-inter text-center leading-relaxed text-base sm:text-lg">
@@ -92,7 +92,7 @@ const AboutSkillsCerts: React.FC<Props> = ({
                   className="transition-all duration-300 hover:scale-110 group"
                   aria-label={c.title}
                 >
-                  <div className="relative w-30 h-30 sm:w-65 sm:h-65 rounded-xl overflow-hidden">
+                  <div className="relative w-28 h-28 sm:w-50 sm:h-50 md:w-70 md:h-75 lg:w-55 lg:h-55 xl:w-75 xl:h-75 rounded-xl overflow-hidden">
                     {/* Default image */}
                     <img
                       src={c.logoSrc}

@@ -38,7 +38,7 @@ const ContactMe: React.FC<Props> = ({
                     loading="lazy"
                   />
                 </div>
-                <span className="text-white font-inter text-center text-base font-medium">
+                <span className="text-white font-inter text-center text-sm sm:text-base font-medium">
                   {contact.name}
                 </span>
               </a>
