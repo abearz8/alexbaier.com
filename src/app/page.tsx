@@ -73,11 +73,11 @@ export default function Home() {
           <div className="w-[90vw] text-center">
             <div className="flex items-center justify-center gap-3 flex-wrap">
               <div className="text-white font-bold leading-tight font-inter tracking-tight" style={{ fontSize: 'min(8vw, 6rem)' }}>
-                 Hi, my name's Alex!<br />
+                 Hi, my name&apos;s Alex!<br />
                </div>
                <div className="w-full h-4 sm:h-6 md:h-8"></div>
                <div className="text-white font-bold leading-tight font-inter tracking-tight" style={{ fontSize: 'min(8vw, 6rem)' }}>
-                 I'm a 
+                 I&apos;m a 
                </div>
               <span className="inline-block w-[1vw]"></span>
               

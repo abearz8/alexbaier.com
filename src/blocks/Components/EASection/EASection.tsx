@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 
 type Extracurricular = {
   org: string;
@@ -37,26 +37,6 @@ const EASection: React.FC<EASectionProps> = ({
       // Reset animation state after transition completes
       setTimeout(() => setIsAnimating(false), 500);
     }
-  };
-
-  const startWaveAnimation = (element: HTMLElement, mouseX: number, mouseY: number) => {
-    const rect = element.getBoundingClientRect();
-    const x = mouseX - rect.left;
-    const y = mouseY - rect.top;
-    
-    // Calculate angle from center
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-    const angle = Math.atan2(y - centerY, x - centerX) * (180 / Math.PI);
-    const startAngle = (angle < 0 ? angle + 360 : angle) + 90;
-    
-    element.style.setProperty('--start-angle', `${startAngle}deg`);
-    element.classList.add('wave-border');
-    
-    // Remove the class after animation completes to allow re-triggering
-    setTimeout(() => {
-      element.classList.remove('wave-border');
-    }, 300);
   };
 
   return (
