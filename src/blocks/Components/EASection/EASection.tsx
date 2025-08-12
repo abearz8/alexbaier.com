@@ -109,7 +109,7 @@ const EASection: React.FC<EASectionProps> = ({
             <button
               onClick={() => handleTabChange()}
               className={[
-                "relative z-10 flex-1 px-6 text-sm sm:text-base font-inter font-semibold rounded-tl-2xl",
+                "relative z-10 flex-1 px-6 text-xs sm:text-sm md:text-base font-inter font-semibold rounded-tl-2xl",
                 "transition-all duration-200 ease-out flex items-center justify-center h-full",
                 activeTab === "awards" ? "text-white" : "text-white/70 hover:text-white/90",
               ].join(" ")}
@@ -121,7 +121,7 @@ const EASection: React.FC<EASectionProps> = ({
             <button
               onClick={() => handleTabChange()}
               className={[
-                "relative z-10 flex-1 px-6 text-sm sm:text-base font-inter font-semibold rounded-tr-2xl",
+                "relative z-10 flex-1 px-6 text-xs sm:text-sm md:text-base font-inter font-semibold rounded-tr-2xl",
                 "transition-all duration-200 ease-out flex items-center justify-center h-full",
                 activeTab === "extracurriculars" ? "text-white" : "text-white/70 hover:text-white/90",
               ].join(" ")}
@@ -163,8 +163,8 @@ const EASection: React.FC<EASectionProps> = ({
                     <div className="relative z-10 flex flex-col justify-center h-full">
                       <div className="flex items-start justify-between gap-4 mb-2">
                         <div className="flex-1">
-                          <h4 className="text-white text-xl font-bold font-inter mb-2">{item.org}</h4>
-                          <p className="text-purple-300 font-inter mb-3">{item.position}</p>
+                          <h4 className="text-white text-lg sm:text-xl lg:text-2xl font-bold font-inter mb-2">{item.org}</h4>
+                          <p className="text-purple-300 font-inter text-lg mb-3">{item.position}</p>
                         </div>
                         <div className="w-14 h-14 rounded-xl bg-white/10 border border-white/10 grid place-items-center overflow-hidden flex-shrink-0 hidden xs:grid">
                           <img
@@ -175,7 +175,7 @@ const EASection: React.FC<EASectionProps> = ({
                           />
                         </div>
                       </div>
-                      <p className="text-white/80 font-inter leading-relaxed mb-3" style={{ fontSize: 'min(3.5vw, 1rem)' }}>
+                      <p className="text-white/80 font-inter leading-relaxed mb-3 text-base sm:text-lg">
                         {item.description}
                       </p>
                     </div>
@@ -194,8 +194,8 @@ const EASection: React.FC<EASectionProps> = ({
                       <div className="w-full h-16 mb-6 flex items-center justify-center">
                         <img src={award.iconSrc} alt={`${award.title} icon`} className="max-w-[70%] max-h-full object-contain" loading="lazy" />
                       </div>
-                      <h4 className="text-white text-xl font-bold font-inter mb-2">{award.title}</h4>
-                      <p className="text-white/80 font-inter leading-relaxed" style={{ fontSize: 'min(3.5vw, 1rem)' }}>
+                      <h4 className="text-white text-lg sm:text-xl lg:text-2xl font-bold font-inter mb-2">{award.title}</h4>
+                      <p className="text-white/80 font-inter leading-relaxed text-base sm:text-lg">
                         {award.description}
                       </p>
                     </div>

@@ -32,12 +32,13 @@ const Navigation = () => {
         return;
       }
 
-      for (const section of sections) {
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i];
         const el = document.getElementById(section);
         if (!el) continue;
-        const { top, bottom } = el.getBoundingClientRect();
-        const center = (top + bottom) / 2;
-        if (center <= winH * 0.8 && center >= 0) {
+        const { top } = el.getBoundingClientRect();
+        // Check if we're past this section's top (for down-scroll) or if top is in view (for up-scroll)
+        if (top <= winH * 0.4) {
           setActiveSection(section);
           break;
         }

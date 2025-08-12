@@ -23,7 +23,7 @@ const AboutSkillsCerts: React.FC<Props> = ({
       <div className="max-w-6xl mx-auto px-4">
         {/* Blurb */}
         <div className="bg-black/40 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg px-6 py-6 md:px-8 md:py-8">
-          <p className="text-white/90 font-inter text-center leading-relaxed" style={{ fontSize: 'min(3.5vw, 1rem)' }}>
+          <p className="text-white/90 font-inter text-center leading-relaxed text-base sm:text-lg">
             {blurb}
           </p>
         </div>
@@ -71,7 +71,7 @@ const AboutSkillsCerts: React.FC<Props> = ({
                         <span className="text-white/70 text-xs">{lang.name[0] || "•"}</span>
                       )}
                     </div>
-                    <span className="text-white font-inter text-center text-xs sm:text-sm md:text-base">
+                    <span className="text-white font-inter text-center text-xs sm:text-base md:text-lg lg:text-xl">
                       {lang.name}
                     </span>
                   </div>

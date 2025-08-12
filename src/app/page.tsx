@@ -51,7 +51,7 @@ export default function Home() {
           particleColors={['#8B5CF6']}
           particleCount={4000}
           particleSpread={80}
-          speed={0.3}
+          speed={0.5}
           particleBaseSize={3000}
           moveParticlesOnHover={false}
           alphaParticles={false}
@@ -225,7 +225,7 @@ export default function Home() {
                 awards={[
                   {
                     title: "President's Scholar",
-                    description: "Recognized for outstanding academic achievement and leadership. Valued at $50,000 over 4 years.",
+                    description: "Recognized for outstanding academic achievement and leadership ($50,000 over 4 years).",
                     iconSrc: "/logos/Western.png",
                   },
                   {
@@ -235,7 +235,7 @@ export default function Home() {
                   },
                   {
                     title: "John R. Currie Award in Entrepreneurship",
-                    description: "Recognized for entreprenurial spirit, leadership, and community involvement. Valued at $8,000.",
+                    description: "Recognized for entreprenurial spirit, leadership, and community involvement ($8,000).",
                     iconSrc: "/logos/Ivey.png",
                   },
                 ]}
@@ -253,39 +253,44 @@ export default function Home() {
                 title="Lakeside Website"
                 description="Production site for Lakeside Psychological & Educational Services — static HTML/CSS/JS (initially Webflow, finished by hand) hosted on AWS S3 with static-site config."
                 imageSrc="/projects/lakeside.png"
+                smallImageSrc="/projects/lakeside_small.png"
                 imageAlt="LakesidePES Screenshot"
                 liveHref="https://www.lakesidepes.ca/"
                 githubHref="https://github.com/abearz8/lakesidepes.ca"
-                align="right"
+                align="left"
               />
 
               <ProjectShowcase
                 title="Blackjack Game"
                 description="Browser blackjack built with Next.js + TypeScript. Includes full blackjack rules with usable UI and a full set of requirements, design, and testing docs in the project Wiki."
                 imageSrc="/projects/blackjack.png"
+                smallImageSrc="/projects/blackjack_small.png"
                 imageAlt="Blackjack app screenshot"
                 liveHref="https://blackjack-cyan.vercel.app/"
                 githubHref="https://github.com/abearz8/blackjack"
-                align="left"
+                align="right"
               />
 
               <ProjectShowcase
                 title="Cookie Clicker Game"
                 description="Browser idle clicker built with Next.js + TypeScript. Game state persists via localStorage and requirements, design, and testing docs can be found in the project Wiki."
                 imageSrc="/projects/cookie_clicker.png"
+                smallImageSrc="/projects/cookie_clicker_small.png"
                 imageAlt="Cookie clicker app screenshot"
                 liveHref="https://cookie-clicker-lovat.vercel.app/"
                 githubHref="https://github.com/abearz8/cookie-clicker"
-                align="right"
+                align="left"
               />
 
               <ProjectShowcase
                 title="Bonus: Guitar Covers"
-                description="When I'm no coding, I'm learning guitar and making covers of songs I like."
+                description="When I'm not coding, I'm learning guitar and making covers of songs that I like. Stay tuned for some piano too!"
                 imageSrc="/projects/guitar.png"
+                smallImageSrc="/projects/guitar_small.png"
                 imageAlt="Guitar covers screenshot"
                 liveHref="https://youtube.com/@alexbaier4963?si=--cGL31DNMLHaNhw"
-                align="left"
+                align="right"
+                isLast={true}
               />
             </div>
           </div>

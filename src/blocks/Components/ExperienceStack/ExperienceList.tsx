@@ -39,7 +39,7 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
     <div className="bg-black/40 backdrop-blur-md rounded-xl p-4 border border-white/20 mb-4 shadow-lg transition-all duration-300 hover:bg-black/50 hover:scale-105 hover:border-purple-400/60 hover:shadow-[0_0_30px_rgba(139,92,246,0.35)]">
       <div className="flex items-center gap-8">
         {/* Logo Section */}
-        <div className="relative shrink-0 rounded-2xl grid place-items-center overflow-hidden transition-colors duration-300" style={{ width: 'min(20vw, 9rem)', height: 'min(20vw, 9rem)' }}>
+        <div className="relative shrink-0 rounded-2xl grid place-items-center overflow-hidden transition-colors duration-300 hidden sm:grid" style={{ width: 'min(20vw, 9rem)', height: 'min(20vw, 9rem)' }}>
           {logoSrc ? (
             <img
               src={logoSrc}
@@ -58,21 +58,21 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
         <div className="flex-1 min-w-0">
           <div className="flex items-start justify-between gap-4 mb-2">
             <div className="flex-1">
-              <h3 className="text-white text-xl font-bold font-inter mb-1">
+              <h3 className="text-white text-lg sm:text-xl lg:text-2xl font-bold font-inter mb-1">
                 {title}
               </h3>
               {company && (
-                <p className="text-purple-300 font-inter transition-colors duration-300 hover:text-purple-200">
+                <p className="text-purple-300 font-inter text-base sm:text-lg transition-colors duration-300 hover:text-purple-200">
                   {company}
                 </p>
               )}
             </div>
-            <div className="text-white/70 font-inter text-sm whitespace-nowrap hidden sm:block">
+            <div className="text-white/70 font-inter text-sm sm:text-base whitespace-nowrap hidden sm:block">
               {start} – {end}
             </div>
           </div>
           
-          <p className="text-white/80 font-inter leading-relaxed mb-3" style={{ fontSize: 'min(3.5vw, 1rem)' }}>
+          <p className="text-white/80 font-inter leading-relaxed mb-3 text-base sm:text-lg">
             {description}
           </p>
 

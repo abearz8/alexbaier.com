@@ -19,7 +19,7 @@ const ContactMe: React.FC<Props> = ({
 }) => {
   return (
     <section className={`relative w-full ${className}`}>
-      <div className="max-w-4xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-4">
         <div className="bg-black/40 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg p-8">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
             {contacts.map((contact) => (
@@ -38,7 +38,7 @@ const ContactMe: React.FC<Props> = ({
                     loading="lazy"
                   />
                 </div>
-                <span className="text-white font-inter text-center text-sm font-medium">
+                <span className="text-white font-inter text-center text-base font-medium">
                   {contact.name}
                 </span>
               </a>
