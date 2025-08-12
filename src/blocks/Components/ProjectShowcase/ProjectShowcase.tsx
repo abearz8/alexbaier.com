@@ -24,9 +24,9 @@ const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({
   const isRightAligned = align === "right";
 
   return (
-    <div className="relative flex flex-col lg:flex-row items-center gap-8 mb-16">
-      {/* Image Section - Larger and centered */}
-      <div className={`w-full lg:w-2/3 relative ${isRightAligned ? 'lg:order-2' : 'lg:order-1'}`}>
+    <div className="relative mb-32">
+      {/* Image Section - Smaller and positioned */}
+      <div className={`w-full lg:w-3/5 relative ${isRightAligned ? 'lg:ml-auto' : 'lg:mr-auto'}`}>
         <a
           href={liveHref}
           target="_blank"
@@ -45,8 +45,8 @@ const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({
         </a>
       </div>
 
-      {/* Content Section - Overlapping */}
-      <div className={`absolute lg:relative z-10 ${isRightAligned ? 'lg:left-0 lg:pr-8 lg:order-1' : 'lg:right-0 lg:pl-8 lg:order-2'} ${isRightAligned ? 'lg:text-left' : 'lg:text-right'} text-center lg:text-left bg-black/80 backdrop-blur-md rounded-2xl p-6 lg:p-8 shadow-lg lg:w-1/2`}>
+      {/* Content Section - Positioned to overlap */}
+      <div className={`z-20 mt-6 lg:mt-0 lg:absolute lg:top-0 ${isRightAligned ? 'lg:left-0 lg:w-1/2 lg:pr-8' : 'lg:right-0 lg:w-1/2 lg:pl-8'} text-center lg:text-left`}>
         <h3 className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold font-inter mb-4">
           {title}
         </h3>
@@ -55,7 +55,7 @@ const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({
         </p>
         
         {/* Buttons */}
-        <div className={`flex flex-col sm:flex-row gap-4 ${isRightAligned ? 'lg:justify-start' : 'lg:justify-end'}`}>
+        <div className="flex flex-col sm:flex-row gap-4">
           <a
             href={liveHref}
             target="_blank"
@@ -75,6 +75,7 @@ const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({
             </a>
           )}
         </div>
+        
       </div>
     </div>
   );
