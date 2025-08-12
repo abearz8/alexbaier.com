@@ -250,42 +250,41 @@ export default function Home() {
             <SectionHeader className="text-7xl">Projects</SectionHeader>
             <div className="mt-16">
               <ProjectShowcase
-                title="lifeinvader — Social Media App"
-                description="Full-stack social app with React, Node.js, Express, MongoDB, Socket.io, and AWS S3."
-                imageSrc="/projects/lifeinvader.png"
-                imageAlt="lifeinvader app screenshot"
-                liveHref="https://your-live-demo.com/lifeinvader"
-                githubHref="https://github.com/you/lifeinvader"
+                title="Lakeside Website"
+                description="Production site for Lakeside Psychological & Educational Services — static HTML/CSS/JS (initially Webflow, finished by hand) hosted on AWS S3 with static-site config."
+                imageSrc="/projects/lakeside.png"
+                imageAlt="LakesidePES Screenshot"
+                liveHref="https://www.lakesidepes.ca/"
+                githubHref="https://github.com/abearz8/lakesidepes.ca"
                 align="right"
               />
 
               <ProjectShowcase
-                title="Retro-Sketch — Pixel Sketch App"
-                description="Create pixel art with multiple tools, palettes, and exports."
-                imageSrc="/projects/retrosketch.png"
-                imageAlt="Retro-Sketch app screenshot"
-                liveHref="https://your-live-demo.com/retrosketch"
-                githubHref="https://github.com/you/retrosketch"
+                title="Blackjack Game"
+                description="Browser blackjack built with Next.js + TypeScript. Includes full blackjack rules with usable UI and a full set of requirements, design, and testing docs in the project Wiki."
+                imageSrc="/projects/blackjack.png"
+                imageAlt="Blackjack app screenshot"
+                liveHref="https://blackjack-cyan.vercel.app/"
+                githubHref="https://github.com/abearz8/blackjack"
                 align="left"
               />
 
               <ProjectShowcase
-                title="lifeinvader — Social Media App"
-                description="Full-stack social app with React, Node.js, Express, MongoDB, Socket.io, and AWS S3."
-                imageSrc="/projects/lifeinvader2.png"
-                imageAlt="lifeinvader app screenshot"
-                liveHref="https://your-live-demo.com/lifeinvader"
-                githubHref="https://github.com/you/lifeinvader"
+                title="Cookie Clicker Game"
+                description="Browser idle clicker built with Next.js + TypeScript. Game state persists via localStorage and requirements, design, and testing docs can be found in the project Wiki."
+                imageSrc="/projects/cookie_clicker.png"
+                imageAlt="Cookie clicker app screenshot"
+                liveHref="https://cookie-clicker-lovat.vercel.app/"
+                githubHref="https://github.com/abearz8/cookie-clicker"
                 align="right"
               />
 
               <ProjectShowcase
-                title="Retro-Sketch — Pixel Sketch App"
-                description="Create pixel art with multiple tools, palettes, and exports."
-                imageSrc="/projects/retrosketch.png"
-                imageAlt="Retro-Sketch app screenshot"
-                liveHref="https://your-live-demo.com/retrosketch"
-                githubHref="https://github.com/you/retrosketch"
+                title="Bonus: Guitar Covers"
+                description="When I'm no coding, I'm learning guitar and making covers of songs I like."
+                imageSrc="/projects/guitar.png"
+                imageAlt="Guitar covers screenshot"
+                liveHref="https://youtube.com/@alexbaier4963?si=--cGL31DNMLHaNhw"
                 align="left"
               />
             </div>

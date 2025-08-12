@@ -8,7 +8,7 @@ type ProjectShowcaseProps = {
   imageSrc: string;
   imageAlt: string;
   liveHref: string;
-  githubHref: string;
+  githubHref?: string;
   align: "left" | "right";
 };
 
@@ -57,14 +57,16 @@ const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({
           >
             Live Demo
           </a>
-          <a
-            href={githubHref}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-6 py-3 bg-black/40 text-white font-inter font-semibold rounded-xl border border-white/20 transition-all duration-300 hover:bg-black/60 hover:scale-105"
-          >
-            View Code
-          </a>
+          {githubHref && (
+            <a
+              href={githubHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-6 py-3 bg-black/40 text-white font-inter font-semibold rounded-xl border border-white/20 transition-all duration-300 hover:bg-black/60 hover:scale-105"
+            >
+              View Code
+            </a>
+          )}
         </div>
       </div>
     </div>
