@@ -204,38 +204,38 @@ export default function Home() {
                     org: "Orientation Leader (Soph)",
                     position: "Western University Housing",
                     description:
-                      "Led a 6-person committee, managed a $100K grants budget, and produced the year-end recognition gala.",
+                      "Supported programming for 1,200 students within Western's largest residence building and mentored 30 first-years throughout the year to ease their transition.",
                     logoSrc: "/logos/usc.svg",
                   },
                   {
                     org: "Arbitrage Analyst",
                     position: "Mustang Capital",
                     description:
-                      "Supported orientation programming and student events across campus.",
+                      "Completed technical finance training and contributed to the Arbitrage portfolio by analyzing opportunities and helping deploy ~$40K across diverse markets.",
                     logoSrc: "/logos/ivey.svg",
                   },
                   {
                     org: "Advocacy Intern",
                     position: "Active Minds Western",
                     description:
-                      "Participated in workshops and project sprints focused on ML and analytics.",
+                      "Researched and provided reccomendations to university leadership to strengthen campus mental-health support and awareness for students at Western.",
                     logoSrc: "/logos/dsc.svg",
                   },
                 ]}
                 awards={[
                   {
-                    title: "National Scholar",
-                    description: "Recognized for academic excellence and leadership.",
+                    title: "President's Scholar",
+                    description: "Recognized for outstanding academic achievement and leadership. Valued at $50,000 over 4 years.",
                     iconSrc: "/logos/Western.png",
                   },
                   {
-                    title: "Dean’s Honour List",
-                    description: "Awarded for top academic performance.",
+                    title: "2 Time Dean's Honour List",
+                    description: "Achieved a Cumulative GPA of 3.93 / 4.0 or 92% first and second year average in BSc program.",
                     iconSrc: "/logos/Western.png",
                   },
                   {
-                    title: "Hackathon Finalist",
-                    description: "Built a prototype that connects business needs with tech.",
+                    title: "John R. Currie Award in Entrepreneurship",
+                    description: "Recognized for entreprenurial spirit, leadership, and community involvement. Valued at $8,000.",
                     iconSrc: "/logos/Ivey.png",
                   },
                 ]}

@@ -26,7 +26,7 @@ const EASection: React.FC<EASectionProps> = ({
   awards,
   className = "",
 }) => {
-  const [activeTab, setActiveTab] = useState<"extracurriculars" | "awards">("extracurriculars");
+  const [activeTab, setActiveTab] = useState<"extracurriculars" | "awards">("awards");
   const [isAnimating, setIsAnimating] = useState(false);
 
   const handleTabChange = () => {
@@ -155,32 +155,32 @@ const EASection: React.FC<EASectionProps> = ({
               className={[
                 "absolute top-0 h-full w-1/2 rounded-t-2xl bg-gradient-to-r from-purple-600 to-blue-500",
                 "transition-transform duration-300 ease-out",
-                activeTab === "extracurriculars" ? "translate-x-0" : "translate-x-full",
+                activeTab === "awards" ? "translate-x-0" : "translate-x-full",
               ].join(" ")}
             />
-            
-            {/* Extracurriculars Tab */}
-            <button
-              onClick={() => handleTabChange()}
-              className={[
-                "relative z-10 flex-1 px-6 text-sm sm:text-base font-inter font-semibold rounded-tl-2xl",
-                "transition-all duration-200 ease-out flex items-center justify-center h-full",
-                activeTab === "extracurriculars" ? "text-white" : "text-white/70 hover:text-white/90",
-              ].join(" ")}
-            >
-              <span className="text-center">Extracurriculars</span>
-            </button>
             
             {/* Awards Tab */}
             <button
               onClick={() => handleTabChange()}
               className={[
-                "relative z-10 flex-1 px-6 text-sm sm:text-base font-inter font-semibold rounded-tr-2xl",
+                "relative z-10 flex-1 px-6 text-sm sm:text-base font-inter font-semibold rounded-tl-2xl",
                 "transition-all duration-200 ease-out flex items-center justify-center h-full",
                 activeTab === "awards" ? "text-white" : "text-white/70 hover:text-white/90",
               ].join(" ")}
             >
               <span className="text-center">Awards</span>
+            </button>
+            
+            {/* Extracurriculars Tab */}
+            <button
+              onClick={() => handleTabChange()}
+              className={[
+                "relative z-10 flex-1 px-6 text-sm sm:text-base font-inter font-semibold rounded-tr-2xl",
+                "transition-all duration-200 ease-out flex items-center justify-center h-full",
+                activeTab === "extracurriculars" ? "text-white" : "text-white/70 hover:text-white/90",
+              ].join(" ")}
+            >
+              <span className="text-center">Extracurriculars</span>
             </button>
           </div>
         </div>
@@ -208,17 +208,17 @@ const EASection: React.FC<EASectionProps> = ({
           ].join(" ")}>
             {activeTab === "extracurriculars" ? (
               /* Extracurriculars Content */
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 min-h-[250px]">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 min-h-[275px]">
                 {extracurriculars.map((item, index) => (
                   <div
                     key={index}
                     className="ea-card group relative rounded-2xl border-2 border-white/20 bg-black/50 backdrop-blur-md p-5 shadow-lg transition-all duration-300"
                   >
-                    <div className="relative z-10">
+                    <div className="relative z-10 flex flex-col justify-center h-full">
                       <div className="flex items-start justify-between gap-4 mb-2">
                         <div className="flex-1">
-                          <h4 className="text-white text-xl font-bold font-inter mb-1">{item.org}</h4>
-                          <p className="text-purple-300 font-inter">{item.position}</p>
+                          <h4 className="text-white text-xl font-bold font-inter mb-2">{item.org}</h4>
+                          <p className="text-purple-300 font-inter mb-3">{item.position}</p>
                         </div>
                         <div className="w-14 h-14 rounded-xl bg-white/10 border border-white/10 grid place-items-center overflow-hidden flex-shrink-0 hidden xs:grid">
                           <img
@@ -238,15 +238,15 @@ const EASection: React.FC<EASectionProps> = ({
               </div>
             ) : (
               /* Awards Content */
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 min-h-[250px]">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 min-h-[275px]">
                 {awards.map((award, index) => (
                   <div
                     key={index}
                     className="ea-card group relative rounded-2xl border-2 border-white/20 bg-black/50 backdrop-blur-md p-5 shadow-lg transition-all duration-300"
                   >
                     <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
-                      <div className="w-full h-32 mb-4 flex items-center justify-center">
-                        <img src={award.iconSrc} alt={`${award.title} icon`} className="w-3/5 h-full object-contain" loading="lazy" />
+                      <div className="w-full h-16 mb-6 flex items-center justify-center">
+                        <img src={award.iconSrc} alt={`${award.title} icon`} className="max-w-[70%] max-h-full object-contain" loading="lazy" />
                       </div>
                       <h4 className="text-white text-xl font-bold font-inter mb-2">{award.title}</h4>
                       <p className="text-white/80 font-inter leading-relaxed" style={{ fontSize: 'min(3.5vw, 1rem)' }}>
