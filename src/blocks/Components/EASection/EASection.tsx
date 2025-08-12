@@ -89,60 +89,6 @@ const EASection: React.FC<EASectionProps> = ({
             background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 7.2deg, transparent 7.2deg, transparent 360deg);
             animation: waveBorder 0.3s ease-out forwards;
           }
-          
-          @keyframes waveBorder {
-            0% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, transparent 0deg, transparent 360deg); }
-            2% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 7.2deg, transparent 7.2deg, transparent 360deg); }
-            4% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 14.4deg, transparent 14.4deg, transparent 360deg); }
-            6% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 21.6deg, transparent 21.6deg, transparent 360deg); }
-            8% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 28.8deg, transparent 28.8deg, transparent 360deg); }
-            10% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 36deg, transparent 36deg, transparent 360deg); }
-            12% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 43.2deg, transparent 43.2deg, transparent 360deg); }
-            14% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 50.4deg, transparent 50.4deg, transparent 360deg); }
-            16% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 57.6deg, transparent 57.6deg, transparent 360deg); }
-            18% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 64.8deg, transparent 64.8deg, transparent 360deg); }
-            20% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 72deg, transparent 72deg, transparent 360deg); }
-            22% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 79.2deg, transparent 79.2deg, transparent 360deg); }
-            24% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 86.4deg, transparent 86.4deg, transparent 360deg); }
-            26% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 93.6deg, transparent 93.6deg, transparent 360deg); }
-            28% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 100.8deg, transparent 100.8deg, transparent 360deg); }
-            30% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 108deg, transparent 108deg, transparent 360deg); }
-            32% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 115.2deg, transparent 115.2deg, transparent 360deg); }
-            34% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 122.4deg, transparent 122.4deg, transparent 360deg); }
-            36% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 129.6deg, transparent 129.6deg, transparent 360deg); }
-            38% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 136.8deg, transparent 136.8deg, transparent 360deg); }
-            40% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 144deg, transparent 144deg, transparent 360deg); }
-            42% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 151.2deg, transparent 151.2deg, transparent 360deg); }
-            44% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 158.4deg, transparent 158.4deg, transparent 360deg); }
-            46% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 165.6deg, transparent 165.6deg, transparent 360deg); }
-            48% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 172.8deg, transparent 172.8deg, transparent 360deg); }
-            50% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 180deg, transparent 180deg, transparent 360deg); }
-            52% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 187.2deg, transparent 187.2deg, transparent 360deg); }
-            54% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 194.4deg, transparent 194.4deg, transparent 360deg); }
-            56% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 201.6deg, transparent 201.6deg, transparent 360deg); }
-            58% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 208.8deg, transparent 208.8deg, transparent 360deg); }
-            60% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 216deg, transparent 216deg, transparent 360deg); }
-            62% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 223.2deg, transparent 223.2deg, transparent 360deg); }
-            64% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 230.4deg, transparent 230.4deg, transparent 360deg); }
-            66% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 237.6deg, transparent 237.6deg, transparent 360deg); }
-            68% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 244.8deg, transparent 244.8deg, transparent 360deg); }
-            70% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 252deg, transparent 252deg, transparent 360deg); }
-            72% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 259.2deg, transparent 259.2deg, transparent 360deg); }
-            74% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 266.4deg, transparent 266.4deg, transparent 360deg); }
-            76% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 273.6deg, transparent 273.6deg, transparent 360deg); }
-            78% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 280.8deg, transparent 280.8deg, transparent 360deg); }
-            80% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 288deg, transparent 288deg, transparent 360deg); }
-            82% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 295.2deg, transparent 295.2deg, transparent 360deg); }
-            84% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 302.4deg, transparent 302.4deg, transparent 360deg); }
-            86% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 309.6deg, transparent 309.6deg, transparent 360deg); }
-            88% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 316.8deg, transparent 316.8deg, transparent 360deg); }
-            90% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 324deg, transparent 324deg, transparent 360deg); }
-            92% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 331.2deg, transparent 331.2deg, transparent 360deg); }
-            94% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 338.4deg, transparent 338.4deg, transparent 360deg); }
-            96% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 345.6deg, transparent 345.6deg, transparent 360deg); }
-            98% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 352.8deg, transparent 352.8deg, transparent 360deg); }
-            100% { background: conic-gradient(from var(--start-angle, 0deg), #8b5cf6 0deg, #8b5cf6 360deg); }
-          }
         `}
       </style>
 
