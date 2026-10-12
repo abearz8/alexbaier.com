@@ -26,6 +26,7 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
   // Determine logo source based on company or provided logo
   const getLogoSrc = () => {
     if (logo) return logo;
+    if (company?.toLowerCase().includes('constellation')) return '/Constellation_logo.webp';
     if (company?.toLowerCase().includes('bdo')) return '/BDO_logo.png';
     if (company?.toLowerCase().includes('lakeside')) return '/Lakeside_logo.png';
     if (company?.toLowerCase().includes('council')) return '/USC_logo.png';

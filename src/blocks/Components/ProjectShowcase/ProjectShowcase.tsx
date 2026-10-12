@@ -10,6 +10,7 @@ type ProjectShowcaseProps = {
   imageAlt: string;
   liveHref: string;
   githubHref?: string;
+  buttonText?: string;
   align: "left" | "right";
   isLast?: boolean;
 };
@@ -22,6 +23,7 @@ const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({
   imageAlt,
   liveHref,
   githubHref,
+  buttonText = "View Code",
   align,
   isLast = false,
 }) => {
@@ -78,7 +80,7 @@ const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({
                            bg-[linear-gradient(110deg,transparent,rgba(255,255,255,0.2),transparent)]
                            transition-transform duration-500 group-hover:translate-x-full"
               />
-              <span className="relative">View Code</span>
+              <span className="relative">{buttonText}</span>
             </a>
           )}
         </div>

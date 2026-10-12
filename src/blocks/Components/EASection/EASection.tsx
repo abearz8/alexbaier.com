@@ -26,15 +26,13 @@ const EASection: React.FC<EASectionProps> = ({
   awards,
   className = "",
 }) => {
-  const [activeTab, setActiveTab] = useState<"extracurriculars" | "awards">("awards");
+  const [activeTab, setActiveTab] = useState<"extracurriculars" | "awards">("extracurriculars");
   const [isAnimating, setIsAnimating] = useState(false);
 
-  const handleTabChange = () => {
-    if (!isAnimating) {
+  const handleTabChange = (tab: "extracurriculars" | "awards") => {
+    if (!isAnimating && tab !== activeTab) {
       setIsAnimating(true);
-      // Switch to the opposite tab
-      setActiveTab(activeTab === "extracurriculars" ? "awards" : "extracurriculars");
-      // Reset animation state after transition completes
+      setActiveTab(tab);
       setTimeout(() => setIsAnimating(false), 500);
     }
   };
@@ -81,32 +79,32 @@ const EASection: React.FC<EASectionProps> = ({
               className={[
                 "absolute top-0 h-full w-1/2 rounded-t-2xl bg-gradient-to-r from-purple-600 to-blue-500",
                 "transition-transform duration-300 ease-out",
-                activeTab === "awards" ? "translate-x-0" : "translate-x-full",
+                activeTab === "extracurriculars" ? "translate-x-0" : "translate-x-full",
               ].join(" ")}
             />
             
-            {/* Awards Tab */}
-            <button
-              onClick={() => handleTabChange()}
-              className={[
-                "relative z-10 flex-1 px-6 text-xs sm:text-sm md:text-base font-inter font-semibold rounded-tl-2xl",
-                "transition-all duration-200 ease-out flex items-center justify-center h-full",
-                activeTab === "awards" ? "text-white" : "text-white/70 hover:text-white/90",
-              ].join(" ")}
-            >
-              <span className="text-center">Awards</span>
-            </button>
-            
             {/* Extracurriculars Tab */}
             <button
-              onClick={() => handleTabChange()}
+              onClick={() => handleTabChange("extracurriculars")}
               className={[
-                "relative z-10 flex-1 px-6 text-xs sm:text-sm md:text-base font-inter font-semibold rounded-tr-2xl",
+                "relative z-10 flex-1 px-6 text-xs sm:text-sm md:text-base font-inter font-semibold rounded-tl-2xl",
                 "transition-all duration-200 ease-out flex items-center justify-center h-full",
                 activeTab === "extracurriculars" ? "text-white" : "text-white/70 hover:text-white/90",
               ].join(" ")}
             >
               <span className="text-center">Extracurriculars</span>
+            </button>
+
+            {/* Awards Tab */}
+            <button
+              onClick={() => handleTabChange("awards")}
+              className={[
+                "relative z-10 flex-1 px-6 text-xs sm:text-sm md:text-base font-inter font-semibold rounded-tr-2xl",
+                "transition-all duration-200 ease-out flex items-center justify-center h-full",
+                activeTab === "awards" ? "text-white" : "text-white/70 hover:text-white/90",
+              ].join(" ")}
+            >
+              <span className="text-center">Awards</span>
             </button>
           </div>
         </div>
@@ -170,8 +168,8 @@ const EASection: React.FC<EASectionProps> = ({
                     key={index}
                     className="ea-card group relative rounded-2xl border-2 border-white/20 bg-black/50 backdrop-blur-md p-5 shadow-lg transition-all duration-300"
                   >
-                    <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
-                      <div className={`w-full h-16 ${award.iconSrc?.includes('Ivey') ? 'mb-4 mt-2' : 'mb-6'} flex items-center justify-center`}>
+                    <div className="relative z-10 flex flex-col items-center justify-start h-full text-center pt-4">
+                      <div className="w-full h-16 mb-5 flex items-center justify-center">
                         <img src={award.iconSrc} alt={`${award.title} icon`} className="max-w-[70%] max-h-full object-contain" loading="lazy" />
                       </div>
                       <h4 className="text-white text-lg sm:text-xl lg:text-2xl font-bold font-inter mb-2">{award.title}</h4>

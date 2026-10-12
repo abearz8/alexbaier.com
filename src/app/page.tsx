@@ -12,33 +12,33 @@ import EASection from "@/blocks/Components/EASection/EASection";
 
 const experiences: ExperienceItem[] = [
   {
-    title: "Grants and Recognition Coordinator",
-    company: "Western University Students' Council",
-    start: "September 2025",
-    end: "Present",
+    title: "M&A Intern — Andromeda Group",
+    company: "Constellation Software",
+    start: "May 2026",
+    end: "August 2026",
     description:
-      "Part-time work - Led a six-person committee to manage the $100,000+ budget for student events and initiatives and $20,000 in student awards.",
-    skills: ["Team Leadership", "Grant Evaluation", "Communication"],
-    companyUrl: "https://westernusc.ca/services/grants-and-recognition/",
+      "Analyzed 10K+ companies to identify M&A targets and built Python screening tools. Led AI enablement initiatives including an internal knowledge base and staff training. Selected for return offers on both the M&A and AI Enablement teams.",
+    skills: ["M&A Analysis", "Python", "AI Enablement", "Business Development"],
+    companyUrl: "https://www.csiandromeda.com/",
   },
   {
-    title: "Assurance Intern",
+    title: "Assurance Summer Analyst",
     company: "BDO Canada",
     start: "May 2025",
     end: "August 2025",
     description:
-      "Managed client relationships and performed audit procedures in team settings to support accurate financial statements and compliance.",
+      "Prepared financial compilations, reviews, and audits across 8 companies with varying market caps and industries. Built Power BI dashboards for Partners to evaluate client value, driving higher retention and fairer pricing.",
     skills: ["Audit Procedures", "Excel", "Power BI", "Client Communication"],
     companyUrl: "https://www.bdo.ca/services/audit-assurance",
   },
   {
-    title: "Software and Business Analyst",
+    title: "Software and Business Analyst Intern",
     company: "Lakeside Psychological and Educational Services",
     start: "May 2024",
-    end: "April 2025",
+    end: "August 2024",
     description:
-      "Built practice's digital foundation on AWS (site, storage, access), configured professional email and domains, and set up core office IT.",
-    skills: ["AWS", "Email and Domain Admin", "Device Setup", "Security Policies"],
+      "Developed and launched a customized business website, improving brand visibility. Directed deployment of enterprise networks on AWS using Route 53, S3, and WorkMail to meet business needs.",
+    skills: ["AWS", "Web Development", "Route 53 / S3", "WorkMail"],
     companyUrl: "https://www.lakesidepes.ca",
   }
 ];
@@ -149,7 +149,7 @@ export default function Home() {
           <SectionHeader className="text-7xl">About Me</SectionHeader>
           <div className="mt-16">
             <AboutSkillsCerts
-              blurb="I'm a product-minded developer studying Data Science + Business at Western and Ivey. I build and deploy projects with Python, Next.js/TypeScript, SQL, and AWS, and I'm eager to turn them into real products that bridge business and tech."
+              blurb="I'm a Data Science and Ivey Business student at Western University with experience building and deploying AI-powered products and automation tools. I enjoy working at the intersection of business and technology, using Python, TypeScript, SQL, and AWS to turn real problems into practical, scalable solutions."
               languages={[
                 { name: "Python", logoSrc: "/logos/python.png" },
                 { name: "Jupyter", logoSrc: "/logos/jupyter.png" },
@@ -199,41 +199,41 @@ export default function Home() {
               <EASection
                 extracurriculars={[
                   {
-                    org: "Orientation Leader (Soph)",
-                    position: "Western University Housing",
+                    org: "Associate Vice President",
+                    position: "Western University Students' Council",
                     description:
-                      "Supported programming for 1,200 students within Western's largest residence building and mentored 30 first-years throughout the year to ease their transition.",
-                    logoSrc: "/logos/usc.svg",
+                      "3 years on the USC executive team. Currently overseeing the Student Services portfolio as AVP. Previously as Grants & Recognition Coordinator, allocated $100K in club grants and $15K in student awards supporting 200+ organizations.",
+                    logoSrc: "/USC_logo.png",
+                  },
+                  {
+                    org: "Programming Assistant",
+                    position: "Western University Orientation",
+                    description:
+                      "Plans Orientation Week for 5,500 students across 12 buildings and leads a team of 45 Sophs through training and O-Week. Returning for a 3rd year as an Orientation Leader (Soph), mentoring first-year students through their transition to university.",
+                    logoSrc: "/logos/Western.png",
                   },
                   {
                     org: "Arbitrage Analyst",
                     position: "Mustang Capital",
                     description:
-                      "Completed technical finance training and contributed to the Arbitrage portfolio by analyzing opportunities and helping deploy ~$40K across diverse markets.",
-                    logoSrc: "/logos/ivey.svg",
-                  },
-                  {
-                    org: "Advocacy Intern",
-                    position: "Active Minds Western",
-                    description:
-                      "Researched and provided recommendations to university leadership to strengthen campus mental health support and awareness for students at Western.",
-                    logoSrc: "/logos/dsc.svg",
+                      "Completed technical financial training and contributed to the Arbitrage portfolio. Researched and evaluated market opportunities, helping deploy ~$40K across diverse markets while developing core skills in quantitative analysis and portfolio management.",
+                    logoSrc: "/logos/Ivey.png",
                   },
                 ]}
                 awards={[
                   {
-                    title: "President's Scholar",
-                    description: "Recognized for outstanding academic achievement and leadership ($50,000 / 4 years).",
+                    title: "National Presidents Scholarship",
+                    description: "Recognized for outstanding academic achievement and leadership at Western University ($50,000).",
                     iconSrc: "/logos/Western.png",
                   },
                   {
                     title: "Dean's Honour List",
-                    description: "Achieved a cumulative GPA of 3.93 / 4.0 or 92% first and second year average in BSc program.",
+                    description: "Achieved a 3.93 / 4.0 (91%) BSc average and 3.8 / 4.0 (85%) HBA average across both programs.",
                     iconSrc: "/logos/Western.png",
                   },
                   {
                     title: "John R. Currie Award in Entrepreneurship",
-                    description: "Recognized for entrepreneurial spirit, leadership, and community involvement ($8,000).",
+                    description: "Entrepreneurial spirit, leadership, and community involvement at Ivey Business School ($8,000).",
                     iconSrc: "/logos/Ivey.png",
                   },
                 ]}
@@ -247,6 +247,18 @@ export default function Home() {
           <div className="container mx-auto px-4 py-6">
             <SectionHeader className="text-7xl">Projects</SectionHeader>
             <div className="mt-16">
+              <ProjectShowcase
+                title="Kyber"
+                description="iOS app for students that brings courses, deadlines, and study time into one clear plan. Cofounding and building Kyber to make first year less guesswork and more growth."
+                imageSrc="/projects/kyber.png"
+                smallImageSrc="/projects/kyber.png"
+                imageAlt="Kyber app screenshot"
+                liveHref="https://learnkyber.com/"
+                githubHref="https://learnkyber.com/"
+                buttonText="Visit Site"
+                align="right"
+              />
+
               <ProjectShowcase
                 title="Lakeside Website"
                 description="Production site for Lakeside Psychological & Educational Services. Static HTML/CSS/JS (initially Webflow, finished by hand) hosted on AWS S3 with static-site config."
